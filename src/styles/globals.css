@@ -104,6 +104,31 @@ a {
   text-decoration: none;
 }
 
+.creative-highlight{
+  display: inline-block;
+  padding: .25em 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.followers-highlight {
+  position: relative;
+}
+
+.followers-highlight::before {
+  /* Highlight color */
+  background-color: #F9E97E;
+
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 40%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(0deg);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
