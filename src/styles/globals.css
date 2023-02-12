@@ -105,8 +105,8 @@ a {
 }
 
 .creative-highlight{
-  display: inline-block;
-  padding: .25em 0;
+  display: inline;
+  /* padding: .25em 0; */
   background-color: #000000;
   color: #ffffff;
 }
