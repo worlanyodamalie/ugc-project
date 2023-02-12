@@ -47,6 +47,40 @@ const hiwCards = [{
 }
 ]
 
+const plans = [{
+  title: "Free",
+  description: "Level up your Figma design workflow with full access to Clonify library components.",
+  price: "$0",
+  price_title: "Free forever",
+  buttonText: "Join Free",
+  btnBg: "bg-white",
+  btnTextColor: "",
+  btnBgShadow: ""
+},
+{
+  title: "E-commerce store",
+  description: "Level up your Figma design workflow with full access to Clonify library components.",
+  price: "$39",
+  price_title: "Per Month",
+  buttonText: "Join Pro",
+  btnBg: "bg-[#FDE97E]",
+  btnTextColor: "",
+  btnBgShadow: ""
+
+},
+{
+  title: "DTC Brands",
+  description: "Level up your Figma design workflow with full access to Clonify library components.",
+  price: "$89",
+  price_title: "Per Month",
+  buttonText: "Join Pro +",
+  btnBg: "bg-[#141414]",
+  btnTextColor: "text-white",
+  btnBgShadow: "bg-[#FDE97E]"
+
+}
+]
+
 export default function Home() {
   return (
     <>
@@ -326,7 +360,7 @@ export default function Home() {
                 ['Renforcer la relation avec son client','Increase reordering','Social Media licenced content','Reward your superfans'].map((item,index) => {
                       return (
                       <div className='w-1/2' key={"ugc--sec--"+ index}> 
-                           <div  className="flex gap-1 items-center">
+                        <div  className="flex gap-1 items-center">
                         <div>
                         <Image
                           src="/assets/images/check.png"
@@ -442,6 +476,69 @@ export default function Home() {
                   
                </div>
             </div>
+        </section>
+        <section className='container max-w-7xl py-10'>
+            <div className="flex flex-col">
+                <p className="font-roboto font-bold mb-1">Testimonials</p>
+                <h1 className="font-roboto font-bold text-2xl max-w-2xl mb-2">&quot;With Droppin, we collected few months worth of content from our customers in a week.&quot;</h1>
+                <div className="flex gap-2 items-center">
+                    <div>
+                       <Image 
+                          alt="avatar"
+                          src="/assets/images/avatar.png"
+                          width={80}
+                          height={80} />
+                    </div>
+                    <div>
+                       <h1 className="font-syne font-bold text-lg text-black-800">Mike Portnoy</h1>
+                       <p className="font-inter font-normal text-sm">Social Media Agency owner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="container max-w-7xl py-10">
+            <h1 className='font-grifter font-bold text-5xl text-center mb-4'>Choose a pricing plan</h1>
+            <p className="font-noto font-normal text-xl mx-auto text-[#141414] max-w-3xl text-align-last:center">Meet Dropping — the most authentic way to collect customers content. Create a reward campaign and share with your superfans. Create content from your audience for your audience.</p>
+        </section>
+        <section className='container max-w-7xl py-10'>
+             <div className='flex gap-5 w-full justify-center'>
+              {
+                plans.map((plan,index) => {
+                  return (
+                    <div key={"price-card--"+index} className='max-w-[25%] p-6 bg-white rounded-xl shadow-md overflow-hidden border border-[#505050]'>
+                    <div className='flex flex-col'>
+                        <h1 className="font-inter font-bold text-[#141414] text-xl mb-2">{plan.title}</h1>
+                        <p className="font-noto text-sm text-ugc-blue max-w-sm">{plan.description}</p>
+                        <h1 className="font-space_grotesk font-bold text-5xl text-[#141414] my-3">{plan.price}</h1>
+                        <p className="text-sm text-ugc-blue font-noto pb-9">{plan.price_title}</p>
+                        <div className="mb-6">
+                        {
+                           ['Access to full library','1 user license','Figma Plugin','Free Exclusives','Free Exclusives'].map((item,index) => {
+                               return (
+                                 <div key={"price-card--"+{index}} className="flex gap-2 items-center mb-4">
+                                     <div>
+                                       <Image
+                                         src="/assets/images/check-black.png"
+                                         alt="check"
+                                         width="24"
+                                         height="24"
+                                       />
+                                     </div>
+                                     <h2 className="font-noto font-normal text-base">{item}</h2>
+                                 </div>
+                               )
+                           })
+                         }
+                        </div>
+                        
+                         <GenericButton buttonText={plan.buttonText}  bgColor={plan.btnBg} btnTextColor={plan.btnTextColor} btnBgShadow={plan.btnBgShadow} />     
+                    </div>
+                 </div>
+                  )
+                })
+              }
+               
+             </div>
         </section>
       </main>
     </>

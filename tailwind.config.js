@@ -12,7 +12,9 @@ module.exports = {
         grifter: ['var(--font-grifter)'],
         lato: ['var(--font-lato)'],
         syne: ['var(--font-syne)'],
-        poppins: ['var(--font-poppins)']
+        poppins: ['var(--font-poppins)'],
+        roboto: ['var(--font-roboto)'],
+        space_grotesk: ['var(--font-space-grotesk)']
       },
       colors: {
         'ugc-blue': '#3E3E59',

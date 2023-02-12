@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Inter , Noto_Sans_Lepcha , Lato , Syne , Poppins } from '@next/font/google'
+import { Inter , Noto_Sans_Lepcha , Lato , Syne , Poppins , Roboto , Space_Grotesk } from '@next/font/google'
 import localFont from '@next/font/local'
 
 const inter = Inter({ 
@@ -34,11 +34,22 @@ const poppins = Poppins({
   variable: "--font-poppins" 
 })
 
+const roboto = Roboto({ 
+  weight: ["700"],
+  subsets: ['latin'] , 
+  variable: "--font-roboto" 
+})
+
+const space_grotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: "--font-space-grotesk" 
+})
+
 // console.log("grifter",grifter)
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} ${grifter.variable} ${noto.variable} ${lato.variable} ${syne.variable} ${poppins.variable}} font-sans`}>
+    <main className={`${inter.variable} ${grifter.variable} ${noto.variable} ${lato.variable} ${syne.variable} ${poppins.variable} ${roboto.variable} ${space_grotesk.variable} font-sans`}>
        <style jsx global>{
         `
         :root {
