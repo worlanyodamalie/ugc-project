@@ -178,7 +178,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container max-w-7xl py-10 px-4">
+        <section className="container max-w-7xl my-20 px-4">
           <div className="flex flex-wrap justify-center items-center">
             <div className="w-full md:w-1/2">
               <Image
@@ -237,16 +237,28 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <ScribbleWrapper
+        <section className="container  relative">
+       
+            <div className="absolute h-32 w-32 lg:left-[0rem] xl:left-[-5rem] 2xl:left-[-32rem] top-[-5rem]"> 
+                <Image
+                  src={`/assets/images/paperclip.png`}
+                  alt={"papper clip"}
+                  width={85}
+                  height={116}
+                />
+            </div>  
+          
+        </section>
+        {/* <ScribbleWrapper
           data={{
             src: "paperclip.png",
             width: 85,
             height: 116,
             alt: "paperclip",
           }}
-        />
+        /> */}
 
-        <section className="container max-w-7xl px-4  pb-10">
+        <section className="container max-w-7xl my-20 px-8">
           <div className="flex flex-wrap justify-center items-center">
             <div className="flex flex-col  w-full md:w-1/2">
               <div className="mb-4">
@@ -276,16 +288,19 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <ScribbleWrapper
-          data={{
-            src: "yellow-scribble.png",
-            width: 164,
-            height: 290,
-            alt: "yellow scribble",
-          }}
-        />
-        <section className="container max-w-7xl relative">
-          <div className="absolute top-[-10rem] xl:left-[-1rem] p-10  mx-auto bg-white rounded-xl shadow-md overflow-hidden w-full">
+        <section className="container z-1 relative">
+            <div className="absolute h-32 w-32 lg:left-[0rem] xl:left-[-5rem] 2xl:left-[-32rem] top-[-5rem]"> 
+                <Image
+                  src={`/assets/images/yellow-scribble.png`}
+                  alt={"yellow scribble"}
+                  width={164}
+                  height={290}
+                />
+            </div>  
+          
+        </section>
+        <section className="container relative max-w-7xl px-4 z-2">
+          <div className="p-10  mx-auto bg-white rounded-xl shadow-md overflow-hidden w-full">
             <div className="flex md:flex-nowrap flex-wrap max-w-3xl mx-auto">
               <div className="md:w-2/3 w-full">
                 <h1 className="font-grifter font-bold text-2xl">
@@ -326,8 +341,8 @@ export default function Home() {
             height={148}
           /> */}
         </section>
-        <section className="container max-w-7xl py-10">
-           <div className="relative top-6 md:top-0 flex flex-wrap gap-5 justify-center">
+        <section className="container max-w-7xl my-20">
+           <div className="relative  flex flex-wrap gap-5 justify-center">
             {
               items.map((item,index) => {
                 return (
@@ -342,7 +357,7 @@ export default function Home() {
            </div>
 
         </section>
-        <section className="container w-full max-w-7xl py-10 px-4">
+        <section className="container w-full max-w-7xl my-20 px-8">
             <div className="flex flex-wrap lg:flex-nowrap gap-5">
                <div className='flex flex-col lg:w-1/2 w-full'>
                   <div className="mb-8 lg:text-start md:text-center">
