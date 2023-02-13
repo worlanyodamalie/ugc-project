@@ -168,10 +168,19 @@ a {
 
 .btn-animation:hover:before{
   opacity: 1;
+  z-index:11
 }
 
 .btn-animation:hover > span {
   font-weight: 700;
+}
+
+.btn-animation:hover  span.btn-animation-text{
+  z-index: auto
+}
+
+.btn-animation:hover span.btn-animation-shadow{
+  opacity: 0;
 }
 
 @keyframes glowing {
