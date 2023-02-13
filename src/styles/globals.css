@@ -179,9 +179,9 @@ a {
   z-index: auto
 }
 
-.btn-animation:hover span.btn-animation-shadow{
+/* .btn-animation:hover span.btn-animation-shadow{
   opacity: 0;
-}
+} */
 
 @keyframes glowing {
   0% { background-position: 0 0; }
