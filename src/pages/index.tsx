@@ -285,9 +285,9 @@ export default function Home() {
           }}
         />
         <section className="container max-w-7xl relative">
-          <div className="absolute top-[-10rem] left-[-1rem] p-10  mx-auto bg-white rounded-xl shadow-md overflow-hidden w-full">
-            <div className="flex max-w-3xl mx-auto">
-              <div className="w-2/3">
+          <div className="absolute top-[-10rem] xl:left-[-1rem] p-10  mx-auto bg-white rounded-xl shadow-md overflow-hidden w-full">
+            <div className="flex md:flex-nowrap flex-wrap max-w-3xl mx-auto">
+              <div className="md:w-2/3 w-full">
                 <h1 className="font-grifter font-bold text-2xl">
                   Feel your feed with authentic content
                 </h1>

@@ -7,16 +7,19 @@ export function Companies({}){
     return (
         <div className="px-4 mx-auto text-center ">
                <p className="font-lato font-bold text-[#b2b7be] mb-5">INTEGRATING SOON WITH</p>
-               <div className="flex flex-wrap items-center justify-between lg:gap-0  md:gap-1">
-                {
-                    imagesArray.map((image,index) => {
-                        return (
-                            
-                            <Image key={image+"__"+index} src={`/assets/images/${image}.png`}   alt="company logo" width="110" height="50"/>
-
-                        )
-                    })
-                }
+               <div className="flex flex-wrap items-center justify-between lg:gap-0  md:gap-1 gap-2">
+                  
+                        {
+                            imagesArray.map((image,index) => {
+                                return (
+                                 <div key={image+"__"+index}>   
+                                    <Image  src={`/assets/images/${image}.png`}   alt="company logo" width="110" height="50"/>
+                                    </div>
+                                )
+                            })
+                        }
+                  
+                
                 
                 <div className="absolute top-[-9rem] right-[-3rem] w-16">
                     <Image
