@@ -33,10 +33,8 @@ export function NavWrapper(){
       <ul className="flex flex-col items-center  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
         <li><Link href="/" legacyBehavior><a className="font-inter font-bold">For Social Media Brands</a></Link></li>
         <li><Link href="/" legacyBehavior><a className="font-inter font-bold">For Ecom Brands</a></Link></li>
-        <li>
-        <a  href="#"
-            className="relative inline-block text-lg group text-center "
-                >
+        {/* <li>
+        <a  href="#" className="relative inline-block text-lg group text-center">
                   <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                     <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-white" />
                     <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease" />
@@ -47,7 +45,11 @@ export function NavWrapper(){
                     data-rounded="rounded-lg"
                   />
                 </a>
-        </li>
+        </li> */}
+        <a href="#" className="btn-animation relative inline-block text-lg group text-center border-2 border-gray-900 rounded-lg bg-white px-5 py-3">
+            <span className="px-5 py-2 font-noto relative z-10 ">Log in</span>
+            {/* <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span> */}
+        </a>
         {/* <a href="#_" className="relative inline-flex items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
 <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
 <span className="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">

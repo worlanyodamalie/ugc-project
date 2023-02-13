@@ -272,7 +272,7 @@ export default function Home() {
                 create your next creative ad or tik tok content.
               </p>
 
-              <div className="mt-8 w-2/3">
+              <div className="mt-8 ">
                 <GenericButton buttonText="Start your campaign"  />
               </div>
             </div>
@@ -390,8 +390,8 @@ export default function Home() {
                                       height="106"
                                     />
                                   </div>
-                                  <div className='w-2/3 mx-auto p-6 bg-orange rounded-xl shadow-md overflow-hidden'>
-                                      <div className='flex justify-center mb-3'>
+                                  <div className='w-2/3 mx-auto p-4 bg-orange rounded-xl shadow-md overflow-hidden'>
+                                      <div className='flex justify-center '>
                                           <p className='font-inter text-sm font-bold'>https://drop.in/adidas</p>
                                       </div>
                                   </div>
