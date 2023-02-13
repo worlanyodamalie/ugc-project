@@ -90,42 +90,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <div className="w-full h-screen py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-red-500 font-semibold">Good Morning</h2>
-          <p className="mt-2 text-blue-800 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">Welcome to Sling Academy</p>
-        </div>
-
-        <div className="mt-10 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          <div
-            className="bg-amber-500 cursor-pointer text-white p-4 rounded-md text-center shadow-xl">
-            <div className="mt-2 font-bold">John Doe</div>
-            <div className="font-light">Some description</div>
-          </div>
-
-          <div
-            className="bg-red-500 cursor-pointer text-white p-4 rounded-md text-center shadow-xl">
-            <div className="mt-2 font-bold">John Doe</div>
-            <div className="font-light">Some description</div>
-          </div>
-
-          <div
-            className="bg-green-500 cursor-pointer text-white p-4 rounded-md text-center shadow-xl">
-            <div className="mt-2 font-bold">John Doe</div>
-            <div className="font-light">Some description</div>
-          </div>
-
-          <div
-            className="bg-purple-500 cursor-pointer text-white p-4 rounded-md text-center shadow-xl">
-            <div className="mt-2 font-bold">John Doe</div>
-            <div className="font-light">Some description</div>
-          </div>
-        </div>
-
-
-      </div>
-    </div> */}
+      
       <main className={styles.main}>
         <div className="container p-8">
           <NavWrapper />
@@ -159,9 +124,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="relative">
             <Companies />
+            
           </div>
+          {/* <div className="absolute inset-y-0 right-0 w-16">
+                    <Image
+                    src="/assets/images/company-scribble.png"
+                    alt="company scribble"
+                    width={98}
+                    height={358}
+                    
+                    />
+                </div> */}
         </div>
         <section className="w-full pt-12 px-5 bg-[#2B2A2B] shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">
           <div className="flex flex-col justify-center items-center">
@@ -342,14 +317,21 @@ export default function Home() {
                 
               </div>
             </div>
+            
           </div>
+          {/* <Image 
+            src="/assets/images/scribble-purple.png"
+            alt="scribbles"
+            width={100}
+            height={148}
+          /> */}
         </section>
         <section className="container max-w-7xl py-10">
            <div className="relative top-6 md:top-0 flex flex-wrap gap-5 justify-center">
             {
               items.map((item,index) => {
                 return (
-                  <div key={"list--"+index} className='w-1/2 md:w-2/12 '>
+                  <div key={"list--"+index} className='w-1/2 lg:w-2/12 md:w-3/12 '>
                     <h1 className='font-grifter font-bold text-5xl mb-3'>{item.title}</h1>
                     <div><p className="font-noto font-normal text-base">{item.text}</p></div>
                  </div>
