@@ -345,8 +345,8 @@ export default function Home() {
         <section className="container w-full max-w-7xl py-10 px-4">
             <div className="flex flex-wrap lg:flex-nowrap gap-5">
                <div className='flex flex-col lg:w-1/2 w-full'>
-                  <div className="mb-8">
-                  <h1 className='font-grifter font-bold text-5xl mb-2'>How it works</h1>
+                  <div className="mb-8 lg:text-start md:text-center">
+                     <h1 className='font-grifter font-bold text-5xl mb-2'>How it works</h1>
 
                     <div className="w-full lg:w-2/3">
                       <p className='font-noto font-normal text-base'>Create A Reward campaign for your customer from our dashboard and share the link in their buying journey.</p>
@@ -354,7 +354,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="relative pt-8">
-                       <div className="absolute top-0 left-[-4rem]">
+                       <div className="hidden absolute top-0 lg:left-[-4rem] md:left-[6rem] md:block">
                         <Image
                               src={`/assets/images/scribble-green.png`}
                               alt="scribbles"
@@ -384,18 +384,18 @@ export default function Home() {
 
                             </div>
                         </div> 
-                        <div className="absolute bottom-0 right-[10rem]">
-                        <Image
-                              src={`/assets/images/scribble-blue.png`}
-                              alt="scribbles"
-                              width="150"
-                              height="173"
-                            />
+                        <div className="hidden md:block absolute bottom-0 right-[10rem]">
+                          <Image
+                                src={`/assets/images/scribble-blue.png`}
+                                alt="scribbles"
+                                width="150"
+                                height="173"
+                              />
                        </div>
                   </div>
                    
                </div>
-               <div className='flex gap-4 lg:w-1/2 w-full flex-wrap'>
+               <div className='flex gap-4 lg:w-1/2 w-full flex-wrap lg:justify-start md:justify-center'>
                  {
                   hiwCards.map((card,index) => {
                      return (
