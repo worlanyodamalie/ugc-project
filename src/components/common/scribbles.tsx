@@ -13,7 +13,7 @@ interface IScribble{
 
 export function ScribbleWrapper({data}: IScribble){
     return (
-        <div className="relative w-full py-5">
+        <div className="relative w-full">
           <Image
             src={`/assets/images/${data.src}`}
             alt={data.alt}

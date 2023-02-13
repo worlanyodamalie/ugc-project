@@ -3,7 +3,7 @@ import Image from 'next/image'
 // import { Inter , Noto_Sans_Lepcha } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
-import { Companies } from '@/components/layout/index'
+import { Companies , NavWrapper } from '@/components/layout/index'
 import { GenericButton , OutlineButton , ScribbleWrapper } from '@/components/common'
 
 const items = [{
@@ -41,7 +41,7 @@ const hiwCards = [{
 },
 {
   img: 'collect.png',
-  title: 'collect',
+  title: 'Collect',
   text: 'Use this section to describe your company and the products you offer. You could share your company’s'
 
 }
@@ -63,7 +63,7 @@ const plans = [{
   price: "$39",
   price_title: "Per Month",
   buttonText: "Join Pro",
-  btnBg: "bg-[#FDE97E]",
+  btnBg: "bg-orange",
   btnTextColor: "",
   btnBgShadow: ""
 
@@ -74,9 +74,9 @@ const plans = [{
   price: "$89",
   price_title: "Per Month",
   buttonText: "Join Pro +",
-  btnBg: "bg-[#141414]",
+  btnBg: "bg-black-700",
   btnTextColor: "text-white",
-  btnBgShadow: "bg-[#FDE97E]"
+  btnBgShadow: "bg-orange"
 
 }
 ]
@@ -128,46 +128,7 @@ export default function Home() {
     </div> */}
       <main className={styles.main}>
         <div className="container p-8">
-          <nav className="w-full">
-            <div className="flex justify-between justify-items-center items-center">
-              <div>
-                <Link href="/">
-                  <Image
-                    src="/assets/images/logo.png"
-                    alt="UGC Logo"
-                    // className={styles.vercelLogo}
-                    width={200}
-                    height={50}
-                    priority
-                  />
-                </Link>
-              </div>
-              <div className="flex flex-row justify-items-center items-center justify-between w-2/5">
-                <Link href="/" legacyBehavior>
-                  <a className="font-inter font-bold">
-                    For Social Media Brands
-                  </a>
-                </Link>
-                <Link href="/" legacyBehavior>
-                  <a className="font-inter font-bold">For Ecom Brands</a>
-                </Link>
-                <a
-                  href="#"
-                  className="relative inline-block text-lg group text-center w-1/3"
-                >
-                  <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-                    <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50" />
-                    <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease" />
-                    <span className="relative ">Log in</span>
-                  </span>
-                  <span
-                    className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-                    data-rounded="rounded-lg"
-                  />
-                </a>
-              </div>
-            </div>
-          </nav>
+          <NavWrapper />
           <div className="grid max-w-screen-xl  py-8  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <h1 className="font-grifter max-w-2xl text-4xl md:text-5xl xl:text-6xl font-bold md:leading-normal	 xl:leading-snug">
@@ -188,7 +149,7 @@ export default function Home() {
               <Image
                 src="/assets/images/turn-your-followers.png"
                 alt="image of a woman smiling"
-                width="369"
+                width="400"
                 height="503"
                 // layout="fill"
                 // objectFit="cover"
@@ -242,9 +203,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container py-10">
-          <div className="flex justify-center items-center">
-            <div className="w-1/2">
+        <section className="container max-w-7xl py-10 px-4">
+          <div className="flex flex-wrap justify-center items-center">
+            <div className="w-full md:w-1/2">
               <Image
                 src="/assets/images/collect-ugc-content.png"
                 alt="transform your customer content"
@@ -254,7 +215,7 @@ export default function Home() {
                 sizes="100vw"
               />
             </div>
-            <div className="flex flex-col  w-1/2">
+            <div className="flex flex-col  w-full md:w-1/2">
               <div className="mb-4">
                 <OutlineButton buttonText="Collect" />
               </div>
@@ -265,7 +226,7 @@ export default function Home() {
                 Send rewarding link to your customers in exchange for vertical
                 content to be used on social media.
               </p>
-              <div className="flex gap-3 mb-4">
+              <div className="flex flex-wrap lg:flex-nowrap gap-3 mb-4">
                 <Image
                   src="/assets/images/android.png"
                   alt="android"
@@ -280,7 +241,7 @@ export default function Home() {
                   overviews
                 </p>
               </div>
-              <div className="flex gap-3 mb-4">
+              <div className="flex flex-wrap lg:flex-nowrap gap-3 mb-4">
                 <Image
                   src="/assets/images/zapier.png"
                   alt="android"
@@ -310,13 +271,13 @@ export default function Home() {
           }}
         />
 
-        <section className="container py-10">
-          <div className="flex justify-center items-center">
-            <div className="flex flex-col  w-1/2">
+        <section className="container max-w-7xl px-4  pb-10">
+          <div className="flex flex-wrap justify-center items-center">
+            <div className="flex flex-col  w-full md:w-1/2">
               <div className="mb-4">
                 <OutlineButton buttonText="Reward" />
               </div>
-              <h1 className="font-grifter mb-2 font-bold text-[#212121] text-4xl mb-3">
+              <h1 className="font-grifter  font-bold text-[#212121] text-4xl mb-3">
                 Reward your customers
               </h1>
               <p className="font-noto font-normal text-ugc-blue mb-4">
@@ -325,10 +286,10 @@ export default function Home() {
               </p>
 
               <div className="mt-8 w-2/3">
-                <GenericButton buttonText="Start your campaign" />
+                <GenericButton buttonText="Start your campaign"  />
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <Image
                 src="/assets/images/reward-your-customers.png"
                 alt="reward your customers"
@@ -348,10 +309,10 @@ export default function Home() {
             alt: "yellow scribble",
           }}
         />
-        <section className="container relative">
-          <div className="absolute top-[-8rem] p-10  mx-auto bg-white rounded-xl shadow-md overflow-hidden w-full">
-            <div className="flex ">
-              <div className="w-1/3">
+        <section className="container max-w-7xl relative">
+          <div className="absolute top-[-10rem] left-[-1rem] p-10  mx-auto bg-white rounded-xl shadow-md overflow-hidden w-full">
+            <div className="flex max-w-3xl mx-auto">
+              <div className="w-2/3">
                 <h1 className="font-grifter font-bold text-2xl">
                   Feel your feed with authentic content
                 </h1>
@@ -383,13 +344,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container py-10">
-           <div className="flex gap-3 justify-center">
+        <section className="container max-w-7xl py-10">
+           <div className="relative top-6 md:top-0 flex flex-wrap gap-5 justify-center">
             {
               items.map((item,index) => {
                 return (
-                  <div key={"list--"+index} className='w-2/12'>
-                    <h1 className='font-grifter font-bold text-6xl mb-3'>{item.title}</h1>
+                  <div key={"list--"+index} className='w-1/2 md:w-2/12 '>
+                    <h1 className='font-grifter font-bold text-5xl mb-3'>{item.title}</h1>
                     <div><p className="font-noto font-normal text-base">{item.text}</p></div>
                  </div>
                 )
@@ -399,13 +360,13 @@ export default function Home() {
            </div>
 
         </section>
-        <section className="container w-full max-w-7xl py-10">
-            <div className="flex gap-5">
-               <div className='flex flex-col w-1/2'>
+        <section className="container w-full max-w-7xl py-10 px-4">
+            <div className="flex flex-wrap lg:flex-nowrap gap-5">
+               <div className='flex flex-col lg:w-1/2 w-full'>
                   <div className="mb-8">
                   <h1 className='font-grifter font-bold text-5xl mb-2'>How it works</h1>
 
-                    <div className="w-2/3">
+                    <div className="w-full lg:w-2/3">
                       <p className='font-noto font-normal text-base'>Create A Reward campaign for your customer from our dashboard and share the link in their buying journey.</p>
 
                     </div>
@@ -419,10 +380,10 @@ export default function Home() {
                               height="185"
                             />
                        </div>
-                       <div className="p-8 bg-white rounded-xl shadow-md overflow-hidden ">
+                       <div className="max-w-sm md:mx-auto lg:mx-0 p-8 bg-white rounded-xl shadow-md overflow-hidden ">
                             <div className="flex flex-col">
                                   <div className='flex justify-center'>
-                                     <h1 className="font-poppins font-bold text-3xl">Campaign Created</h1>
+                                     <h1 className="font-poppins font-bold text-2xl">Campaign Created</h1>
                                   </div>
                                   <div className='py-8 flex justify-center'>
                                     <Image 
@@ -452,11 +413,11 @@ export default function Home() {
                   </div>
                    
                </div>
-               <div className='flex gap-4 w-1/2  flex-wrap'>
+               <div className='flex gap-4 lg:w-1/2 w-full flex-wrap'>
                  {
                   hiwCards.map((card,index) => {
                      return (
-                      <div className="w-5/12" key={"hiw---cards--"+index}>
+                      <div className="md:w-5/12" key={"hiw---cards--"+index}>
                         <div className="mb-3">
                          <Image 
                            src={`/assets/images/${card.img}`}
@@ -477,8 +438,8 @@ export default function Home() {
                </div>
             </div>
         </section>
-        <section className='container max-w-7xl py-10'>
-            <div className="flex flex-col">
+        <section className='container max-w-7xl py-10 px-4 '>
+            <div className="flex flex-col mx-auto max-w-md">
                 <p className="font-roboto font-bold mb-1">Testimonials</p>
                 <h1 className="font-roboto font-bold text-2xl max-w-2xl mb-2">&quot;With Droppin, we collected few months worth of content from our customers in a week.&quot;</h1>
                 <div className="flex gap-2 items-center">
@@ -496,16 +457,16 @@ export default function Home() {
                 </div>
             </div>
         </section>
-        <section className="container max-w-7xl py-10">
-            <h1 className='font-grifter font-bold text-5xl text-center mb-4'>Choose a pricing plan</h1>
+        <section className="container max-w-7xl py-10 px-4">
+            <h1 className='font-grifter font-bold text-4xl md:text-5xl text-center mb-4'>Choose a pricing plan</h1>
             <p className="font-noto font-normal text-xl mx-auto text-[#141414] max-w-3xl text-align-last:center">Meet Dropping — the most authentic way to collect customers content. Create a reward campaign and share with your superfans. Create content from your audience for your audience.</p>
         </section>
-        <section className='container max-w-7xl py-10'>
-             <div className='flex gap-5 w-full justify-center'>
+        <section className='container max-w-7xl px-4 py-10'>
+             <div className='flex flex-wrap gap-5 w-full justify-center'>
               {
                 plans.map((plan,index) => {
                   return (
-                    <div key={"price-card--"+index} className='max-w-[25%] p-6 bg-white rounded-xl shadow-md overflow-hidden border border-[#505050]'>
+                    <div key={"price-card--*-"+index+plan.price_title} className='lg:max-w-[25%] md:max-w-[30%] p-6 bg-white rounded-xl shadow-md overflow-hidden border border-[#505050]'>
                     <div className='flex flex-col'>
                         <h1 className="font-inter font-bold text-[#141414] text-xl mb-2">{plan.title}</h1>
                         <p className="font-noto text-sm text-ugc-blue max-w-sm">{plan.description}</p>
@@ -515,7 +476,7 @@ export default function Home() {
                         {
                            ['Access to full library','1 user license','Figma Plugin','Free Exclusives','Free Exclusives'].map((item,index) => {
                                return (
-                                 <div key={"price-card--"+{index}} className="flex gap-2 items-center mb-4">
+                                 <div key={"features--"+{index}} className="flex gap-2 items-center mb-4">
                                      <div>
                                        <Image
                                          src="/assets/images/check-black.png"
@@ -539,6 +500,7 @@ export default function Home() {
               }
                
              </div>
+             <h1 className='pt-8  font-grifter font-bold text-center '> Made with ❤️ in Casablanca 🇲🇦 - contact@dropppin.com</h1>
         </section>
       </main>
     </>

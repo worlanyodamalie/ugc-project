@@ -34,3 +34,9 @@ export function OutlineButton({buttonText}: {buttonText: string}){
       </>
     );
 }
+
+GenericButton.defaultProps = {
+  btnBgShadow:'', 
+  btnTextColor:'', 
+  bgColor:""
+}

@@ -91,12 +91,17 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    background: #F5F4F2; */
+    background-image: url('/assets/images/Ecommerce.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 a {

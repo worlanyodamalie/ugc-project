@@ -6,7 +6,7 @@ const imagesArray = ['chase','asana','google','buzzfeed','toggl',]
 export function Companies({}){
     return (
         <div className="px-4 mx-auto text-center ">
-               <p className="font-lato font-bold text-gray-200 mb-5">INTEGRATING SOON WITH</p>
+               <p className="font-lato font-bold text-[#b2b7be] mb-5">INTEGRATING SOON WITH</p>
                <div className="flex flex-wrap  items-center justify-between">
                 {
                     imagesArray.map((image,index) => {
@@ -17,12 +17,7 @@ export function Companies({}){
                         )
                     })
                 }
-                {/* <Image 
-                    src="/assets/images/company-scribble.png"
-                    alt="a scribble by the company logos"
-                    width="78"
-                    height="347"
-                /> */}
+               
               </div>
           </div>
     )

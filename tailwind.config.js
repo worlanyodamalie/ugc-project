@@ -19,10 +19,12 @@ module.exports = {
       colors: {
         'ugc-blue': '#3E3E59',
         'black': {
+          900: '#121212',
           800: '#212121',
-          900: '#121212'
+          700: '#141414'
         },
-        'orange': '#FDE97E'
+        'orange': '#FDE97E',
+        
       }
     },
   },
